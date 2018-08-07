@@ -12135,7 +12135,13 @@ Standard deviation of prices: $165171.13154429474
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> R2 score of .923 means that 92.3% of the varience in Y is predictable from X. Generall speaking the higher the R2 score the closer the data will fall to the fitted regression line. Thus I consider this model to have successfully captured variation of the target variable</p>
+<p><strong>Answer:</strong> R2 score of .923 means that 92.3% of the varience in Y is predictable from X. Generall speaking the higher the R2 score the closer the data will fall to the fitted regression line. Thus I consider this model to have successfully captured variation of the target variable
+R2 Value is an indicator of how much of the variation in the output is explained by the input. In short it is calculated as 1 - (Sum of Squared Erros of Model)/(Sum of mean squared erros). So R^2 = 1 - (SSE/SST). The minimum value for R^2 is 0 meaning that the SSSE and SST were same which means the error of the regression line and error of the mean value of Y were same. The maximum value of R^2 is 1 which means the error of the regression line was very small or 0 compared to the error of the mean value of Y. 
+In this example the R^2 value is 0.923.</p>
+<p>So,</p>
+<p>0.923 = 1 - (SSE/SST)
+ SSE/SST = .077</p>
+<p>So SSE/SST can be something like 77/1000. Here SSE or the squared error of the regression line is very small compared to the SST value. so the regression line is a good fit for the data</p>
 
 </div>
 </div>
@@ -12212,7 +12218,8 @@ Standard deviation of prices: $165171.13154429474
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> As # of traininig points increase, overfitting may occur resulting in a high CV error. So a split into training and testing subsets ensure that the data neither overfits nor underfits</p>
+<p>**Answer:
+To properly test the performance of a learning algorithm, we need to test it against a dataset for which the true values are available to be compared against the predicted values. If the entire dataset is used to train the model then there wont be any data left to compare the mdoel against and we will not able to measure it's performance for unseen data. That's why we split the dataset into some ratio of training and testing subsets</p>
 
 </div>
 </div>
