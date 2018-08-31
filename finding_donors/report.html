@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11931,7 +11931,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -12026,7 +12026,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -12076,7 +12076,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -12127,7 +12127,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -12340,7 +12340,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -12392,7 +12392,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -12425,6 +12425,18 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training set has 36177 samples.
 Testing set has 9045 samples.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/opt/conda/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -12482,7 +12494,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
@@ -12494,12 +12506,12 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="sd">FN = 0 # No predicted negatives in the naive case</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="c1"># TODO: Calculate accuracy, precision and recall</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">/</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
 <span class="n">recall</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">/</span>  <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">+</span> <span class="mi">0</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">/</span>  <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">+</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">))</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">/</span>  <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">))</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">recall</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">/</span> <span class="p">(</span><span class="n">recall</span> <span class="o">+</span> <span class="n">precision</span><span class="p">)</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">recall</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">/</span> <span class="p">((</span><span class="o">.</span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
 
 <span class="c1"># Print the results </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Naive Predictor: [Accuracy score: </span><span class="si">{:.4f}</span><span class="s2">, F-score: </span><span class="si">{:.4f}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">))</span>
@@ -12519,7 +12531,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.1986]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -12861,7 +12873,29 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Random Forest creates lots and lots of Decision Tree nodes and merges them together to get a more accurate and stable prediction. While creating the trees, Random Forest chooses the best feature among a random subset of the features which results in a better generalization. For example, it will ask questions like if a person is making &gt;50K, what levels of education does he have and what is his occupation, does he have any capital gains etc. The qustions that it will ask will be selected randomly. The algorithm stores the predicted output (income) for these questions and finally votes on what output for each of these question(s) is the best one which is then selected as the predicted output</p>
+<p><strong>Answer: </strong></p>
+<p>Random Forest falls under a machine learning method called "Ensemble Method" which puts together a number of individual models to try and improve prediction. In case of Random Foerst, many Decision Tree models are used to predict the output. The Random Forest algorithm will pick the output which appears most number of times in the individual Decision Trees or most voted on.</p>
+<p>A Decision Tree is a representation of all possible outcomes of a decision based on relevant events. It's called a tree becase it starts out asking a single question (the root) which has possible answers (leaves of the Decision Tree). It's graphical representation looks like a Tree.</p>
+<p>For example if we want to find out if we want to watch a movie in Netflix, we can follow a Decision Tree which starts by asking have we seen the movie before and there are two possible answers (Yes/No) which would be the leaves of the tree (Watched and Unwatched). If we havent seen a movie then we can ask further questions (according to our preferences) such as is this a new release or is this a classic etc.</p>
+
+<pre><code>                        MOVIE (The Last Jedi)
+                          /\
+                         /  \ 
+                        /    \
+                    Watched  Unwatched
+                                 /\
+                                /  \
+                               /    \
+                              /      \  
+                        New Release  Classic
+                            /          \   
+                           /            \
+                          Yes           NO
+
+</code></pre>
+<h2 id="Learning-and-Predicting">Learning and Predicting<a class="anchor-link" href="#Learning-and-Predicting">&#182;</a></h2><p>In a Random Forest model a lot of these "Yes/No" questions are asked about different outcomes. In this example here, if most of the Individual Decision Trees (consisting of different 'questions') predict "Yes" for this movie the Random Forest algorthim will pick this movie as the output.</p>
+<p>A Decision Tree learns by separating the data into as many question/answer pairs as possible. Each question asked about the data splits the data even more and we end up with the output as a set of question-answers asked about the data. The Decision Tree is split into branches (further questions asked about the data) by measuring the cost of splitting. The algorithm will measure all possible branches and decide on the ones that fit the data best considering the cost (loss function). This proess will be repeated until the maximum number of branches have been reached for the tree.</p>
+<p>When a Preditction is to be made, a Decision Tree will take the input data and run it through the Decision Trees already created during training. It essentially asks about the data, the previously prepared set of questions until it reaches the output. In case of Random Forest, out of all these ouputs, the most frequent one is chosen</p>
 <p>References:
 <a href="https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd">https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd</a>
 <a href="https://medium.com/@Synced/how-random-forest-algorithm-works-in-machine-learning-3c0fe15b6674">https://medium.com/@Synced/how-random-forest-algorithm-works-in-machine-learning-3c0fe15b6674</a></p>
@@ -13013,7 +13047,7 @@ Final F-score on the testing data: 0.7279
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> These scores are better than the unoptimized model as indicated by the higher accuracy and higher F-beta score. These results are also much better than the naive predictor benchmarks (accuracy 0.2478 vs 0.8600 and F-beta 0.1986 vs 0.7279) and we can conclude that the algorithm is performing well on the training/testing dataset</p>
+<p><strong>Answer: </strong> These scores are better than the unoptimized model as indicated by the higher accuracy and higher F-beta score. These results are also much better than the naive predictor benchmarks (accuracy 0.2478 vs 0.8600 and F-beta 0.2917 vs 0.7279) and we can conclude that the algorithm is performing well on the training/testing dataset</p>
 <p>The accuracy increase from the Unoptimized Model to the Optimized model means that there was a ~2% increase in the number of correctly classified individuals, which for this business purpose/dataset is great because there will be more potential donors</p>
 
 </div>
